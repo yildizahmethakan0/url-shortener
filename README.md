@@ -1,42 +1,36 @@
-# URL Shortener API 🏷️
+# URL Shortener API
 
-This is a simple URL shortening service built with .NET. The API provides three main endpoints for creating, analyzing, and redirecting shortened URLs.
+Bu proje, .NET ile geliştirilmiş basit bir URL kısaltma servisidir. API, kısaltılmış bağlantılar oluşturma, analiz etme ve yönlendirme işlemleri için üç temel uç nokta sunar.
 
-## 📌 Endpoints
+## Endpoints
 
-### 1️⃣ Create a Shortened URL (`POST /link/add`)
-- Accepts a URL as input.
-- Generates a unique shortened URL.
-- Stores it in the database with an expiration time.
+### 1. Kısaltılmış URL Oluşturma  
+**POST /link/add**  
+- Kullanıcıdan gelen uzun URL'yi alır.  
+- Benzersiz bir kısa URL oluşturur.  
+- Kısa URL'yi veritabanında saklar.  
+- İsteğe bağlı olarak son kullanma süresi belirlenebilir.
 
-### 2️⃣ Analyze a Shortened URL (`GET /link/analyze?url={shortened_url}`)
-- Retrieves analytics data for a given shortened URL.
-- Includes information such as access count and metadata.
+### 2. Kısaltılmış URL Analizi  
+**GET /link/analyze?url={shortened_url}**  
+- Belirtilen kısa URL hakkında analiz bilgisi döner.  
+- Erişim sayısı ve bazı ek veriler yer alabilir.
 
-### 3️⃣ Redirect to the Original URL (`GET /{shortened_code}`)
-- Redirects users from the shortened URL to the original URL.
+### 3. Yönlendirme  
+**GET /{shortened_code}**  
+- Girilen kısa URL kodunu alır.  
+- Kullanıcıyı orijinal uzun URL'ye yönlendirir.
 
-## 🚀 Features
-- ✅ URL validation to ensure valid input.
-- ✅ Unique short URL generation.
-- ✅ Expiration support for shortened links.
-- ✅ Analytics tracking for link usage.
+## Özellikler
 
-## 🏗️ Installation & Usage
+- Girilen URL'lerin doğruluğunu kontrol eder.  
+- Her bağlantı için benzersiz kısa URL üretir.  
+- Kısaltılmış bağlantılar için son kullanma tarihi tanımlanabilir.  
+- Bağlantı kullanımına dair analiz verileri toplar.
 
-1. **Clone the repository:**
-   ```sh
-   git clone https://github.com/yigitozbek/url-shorter.git
-   cd url-shorter
+## Kurulum ve Kullanım
 
-
-
----
-
-## 3️⃣ **README.md Dosyanı Commit Edip GitHub'a Gönder**
-Şimdi terminalde aşağıdaki komutları çalıştırarak **README.md** dosyanı GitHub'a ekleyebilirsin:
-
-```sh
-git add README.md
-git commit -m "Added README.md with project details"
-git push origin main
+1. Reponun klonlanması:
+```bash
+git clone https://github.com/yildizahmethakan0/url-shortener.git
+cd url-shortener
